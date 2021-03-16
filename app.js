@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
   draw()
-  setInterval(() => moveAutomaticaly(), 100);
+  setInterval(() => moveAutomaticaly(), 1000);
 
 
 
