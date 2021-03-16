@@ -35,7 +35,7 @@ body{
   position: absolute;
   z-index: -10;
   width: 10px;;
-  left:50px;
+  left:120px;
   content: url('./assets/img/sol.svg');
   animation:showup 6s;
   animation-iteration-count: 1;
@@ -79,7 +79,64 @@ to{opacity: 1;}
 
 
 
-.forma{background: #000; border:0.01px solid rgb(17, 168, 168)  !important;}
+.forma{background: #000;}
 .none{
   display: none;
+}
+
+.wrap__grids{
+  display: flex;
+  align-items: flex-start;
+}
+
+.mini-grid{
+  width: 80px;
+  height: 80px;
+  margin-top:20px;
+  background:rgba(129, 0, 65, 0.609);
+  padding:20px;
+  margin-left:0;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.mini-grid div{
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #CFC2F1 ;
+  
+}
+
+.mini-grid__forma{
+  background: #FAEB2B;
+
+}
+
+
+
+.configs{
+  display: flex;
+  flex-direction: column;
+  margin-top:-80px;
+  margin-left:-80px;
+}
+.configs button{
+  height: 40px;
+  box-sizing: border-box;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:#FAEB2B;
+  color:#400b41;
+  font-weight: bold;
+  box-shadow:  0px 0px 20px hsla(299, 97%, 57%);
+}
+
+.configs h3{
+  
+  
+  box-shadow:  0px 0px 20px hsla(299, 97%, 57%);
 }
