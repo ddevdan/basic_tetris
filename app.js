@@ -1,19 +1,3 @@
-//var x = 1 // integer
-//var y = 'one' // string
-//var z = [1, 2] // array
-////var w = true //boolean
-//////var a // undefined
-////x = 23
-//alert(x)
-//const and let => 
-//let and var => let limita a variavel ao seu bloco atual, var sobrepoe os blocos 
-// name = "daniel"
-// function showAlert() {
-//   alert('Hi ' + name)
-// }
-
-
-// showAlert()
 
 document.addEventListener('DOMContentLoaded', () => {
   const grid = document.querySelector('.grid')
@@ -23,4 +7,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
   console.log(squares)
   const width = 10
+
+  //formas do tetris
+  const fTetris = [
+    [1, width + 1, width * 2 + 1, 2],
+    [width, width + 1, width + 2, width * 2 + 2],
+    [1, width + 1, width * 2 + 1, width * 2],
+    [width, width * 2, width * 2 + 1, width * 2 + 2]
+  ]
+
+  const zTetris = [
+    [width * 2, width * 2 + 1, width + 1, width + 2],
+    [0, width, width + 1, width * 2 + 1],
+    [width * 2, width * 2 + 1, width + 1, width + 2],
+    [0, width, width + 1, width * 2 + 1]
+  ]
+  const tTetris = [
+    [1, width, width + 1, width + 2],
+    [1, width + 1, width + 2, width * 2 + 1],
+    [width, width + 1, width + 2, width * 2 + 1],
+    [1, width, width + 1, width * 2 + 1]
+  ]
+  const sTetris = [
+    [0, 1, width, width + 1],
+    [0, 1, width, width + 1],
+    [0, 1, width, width + 1],
+    [0, 1, width, width + 1]
+  ]
+  const lTetris = [
+    [1, width + 1, width * 2 + 1, width * 3 + 1]
+    [width, width + 1, width + 2, width + 3]
+    [1, width + 1, width * 2 + 1, width * 3 + 1]
+    [width, width + 1, width + 2, width + 3]
+  ]
 })
+
+const formas = [tTetris, zTetris, tTetris, sTetris, lTetris]
+
