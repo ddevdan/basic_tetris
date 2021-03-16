@@ -1,0 +1,15 @@
+/** styling tetris grids **/
+.grid{
+  width: 200px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  background: yellow;
+}
+
+/** styling blocks of this grid **/
+.grid div{
+  width: 20px;
+  height: 20px;
+  background: blue;
+}
