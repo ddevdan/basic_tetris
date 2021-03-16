@@ -56,6 +56,35 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
+  function undraw() {
+    current.forEach(index => {
+      squares[currentPosition + index].classList.remove('forma')
+    })
+  }
+
+  function moveAutomaticaly() {
+    console.log(currentPosition)
+    undraw()
+    currentPosition += width
+    draw()
+    freeze()
+  }
+
+
+  function freeze() {
+    if (current.some(index => squares[currentPosition + index + width].classList.contains("taken"))) {
+      current.forEach(index => squares[currentPosition + index].classList.add("taken"))
+      random = Math.floor(Math.random() * formas.length)
+      current = formas[random][currentRotation]
+      currentPosition = 4
+      draw()
+    }
+  }
+  draw()
+  setInterval(() => moveAutomaticaly(), 100);
+
+
+
 })
 
 
