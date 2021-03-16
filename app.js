@@ -41,6 +41,19 @@ document.addEventListener('DOMContentLoaded', () => {
   ]
 
   const formas = [fTetris, zTetris, tTetris, sTetris, lTetris]
+  let currentPosition = 4
+  let currentRotation = 0
+
+  //GERAR FORMA ALEATORIA
+  let random = Math.floor(Math.random() * formas.length)
+  let current = formas[random][currentRotation]
+  console.log(current)
+  console.log(random)
+  function draw() {
+    current.forEach(index => {
+      squares[currentPosition + index].classList.add('forma')
+    })
+  }
 
 
 })
