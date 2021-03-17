@@ -8,7 +8,7 @@ body{
   animation-iteration-count: 1;
   opacity: 1;
   background:linear-gradient(to top,#F726FC, #CFC2F1 ,#65B5D3, #3891FF );
-  
+  background: url('./assets/img/bg.gif');
 }
 .container__wraper{
   width: 100%;
@@ -17,7 +17,6 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url('./assets/img/bg.gif');
   perspective: 350px;
 }
 

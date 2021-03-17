@@ -2,10 +2,11 @@
 document.addEventListener('DOMContentLoaded', () => {
   const grid = document.querySelector('.grid')
   let squares = Array.from(document.querySelectorAll('.grid div'))
-  const Score = document.querySelector("#score")
-  const StartBtn = document.querySelector("#start-button")
+  const score = document.querySelector("#score")
+  const startBtn = document.querySelector("#start-button")
   const width = 10
   let nextRandom = 0
+  let timerId
 
   //formas do tetris
   const fTetris = [
@@ -62,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   }
 
-  function moveAutomaticaly() {
+  function moveDown() {
     undraw()
     currentPosition += width
     draw()
@@ -126,8 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('keyup', control)
 
 
-  draw()
-  setInterval(() => moveAutomaticaly(), 1000);
+
 
 
 
@@ -154,8 +154,20 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   }
 
-  draw()
-  setInterval(() => moveAutomaticaly(), 500);
+  startBtn.addEventListener('click', () => {
+    if (timerId) {
+      clearInterval(timerId)
+      timerId = null
+    }
+    else {
+      draw()
+      timerId = setInterval(moveDown, 500)
+      nextRandom = Math.floor(Math.random() * formas.length)
+      displayShape()
+    }
+  })
+
+  // setInterval(() => moveDown(), 500);
 })
 
 
