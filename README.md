@@ -21,4 +21,4 @@ Aprender os conceitos básicos de JavaScript por meio da criação de um jogo.
 
 ### Sobre
 
-[Medium](linkmedium)
+[Medium](https://phsl.medium.com/tetris-utilizando-javascript-5d6a8d37c22d)
