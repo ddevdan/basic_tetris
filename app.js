@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     else {
       draw()
-      timerId = setInterval(moveDown, 100)
+      timerId = setInterval(moveDown, 1000)
       nextRandom = Math.floor(Math.random() * formas.length)
       displayShape()
     }
@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function gameOver() {
     if (current.some(index => squares[currentPosition + index].classList.contains("taken"))) {
       gameOverDisplay.innerHTML = "GAME OVER"
-      scoreDisplay.innerHTML = score
+      scoreDisplay.innerHTML = ""
       clearInterval(timerId)
     }
 
