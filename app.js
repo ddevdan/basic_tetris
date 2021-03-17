@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  const keyPressed = { 37: moveLeft, 38: rotate, 39: moveRight, 40: "pressed 40" }
+  const keyPressed = { 37: moveLeft, 38: rotate, 39: moveRight, 40: moveDown }
 
   function control(e) {
     moveFunction = keyPressed[e.keyCode]
@@ -196,6 +196,18 @@ document.addEventListener('DOMContentLoaded', () => {
       gameOverDisplay.innerHTML = "GAME OVER"
       scoreDisplay.innerHTML = ""
       clearInterval(timerId)
+      squares.forEach(square => {
+        if (square.classList.contains("none")) {
+          console.log("tem sim")
+        } else {
+          square.classList.remove('taken')
+          square.classList.remove('forma')
+        }
+
+
+
+      })
+
     }
 
   }
